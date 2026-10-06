@@ -208,16 +208,16 @@ So, the output in this example means that 'False' has type 'Bool'.
 
 > Try to guess first and then compare your expectations with GHCi output
 
->>> :t True
-<INSERT THE RESULT INSTEAD OF THE TEXT>
+>>> :t True 
+True :: Bool
 >>> :t 'a'
-<INSERT THE RESULT INSTEAD OF THE TEXT>
+'a' :: Char
 >>> :t 42
-<INSERT THE RESULT INSTEAD OF THE TEXT>
+42 :: Num a => a
 
 A pair of boolean and char:
->>> :t (True, 'x')
-<INSERT THE RESULT INSTEAD OF THE TEXT>
+>>> :t (True, 'x') 
+(True, 'x') :: (Bool, Char)
 
 Boolean negation:
 >>> :t not
@@ -449,7 +449,10 @@ Implement the function that takes an integer value and returns the next 'Int'.
   function body with the proper implementation.
 -}
 next :: Int -> Int
-next x = error "next: not implemented!"
+-- next x = error "next: not implemented!"
+-- next x = x + 17
+-- next x = x + 1
+next x = x + 1
 
 {- |
 After you've implemented the function (or even during the implementation), you
