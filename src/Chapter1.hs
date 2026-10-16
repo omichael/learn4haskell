@@ -504,7 +504,6 @@ Implement a function, that takes two numbers and returns the one closer to zero:
 >>> closestToZero (-7) 3
 3
 
-
 🕯 HINT: You can use the 'abs' function and the __if-then-else__ Haskell syntax
   for this task.
 
@@ -521,8 +520,7 @@ branches because it is an expression and it must always return some value.
   satisfying the check will be returned and, therefore, evaluated.
 -}
 closestToZero :: Int -> Int -> Int
-closestToZero x y = error "closestToZero: not implemented!"
-
+closestToZero x y = if (abs(x) < abs(y)) then x else y
 
 {- |
 =⚔️= Task 7
