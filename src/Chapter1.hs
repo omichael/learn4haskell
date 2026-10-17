@@ -429,6 +429,7 @@ task is to specify the type of this function.
 49
 -}
 
+squareSum :: Int -> Int -> Int
 squareSum x y = (x + y) * (x + y)
 
 
@@ -491,7 +492,7 @@ Implement a function that returns the last digit of a given number.
 -}
 -- DON'T FORGET TO SPECIFY THE TYPE IN HERE
 lastDigit :: Int -> Int
-lastDigit x = (mod x 10)
+lastDigit x = (mod (abs x) 10)
 
 
 {- |
@@ -553,7 +554,11 @@ value after "=" where the condition is true.
 Casual reminder about adding top-level type signatures for all functions :)
 -}
 
-mid x y z = error "mid: not implemented!"
+mid :: Int -> Int -> Int -> Int
+mid x y z
+    | (((y >= x) && (y <= z)) || ((y >= z) && (y <= x))) = y
+    | (((x >= y) && (x <= z)) || ((x >= z) && (x <= y))) = x
+    | otherwise = z
 
 {- |
 =⚔️= Task 8
@@ -567,8 +572,6 @@ True
 >>> isVowel 'x'
 False
 -}
-isVowel c = error "isVowel: not implemented!"
-
 
 {- |
 == Local variables and functions
@@ -614,7 +617,11 @@ pythagoras a b = square a + square b
 You can define multiple functions inside __where__!
 Just remember to keep proper indentation.
 -}
-
+isVowel :: Char -> Bool
+isVowel c = charMemberOfGroup c "aeiouAEIOU"
+    where
+      charMemberOfGroup :: Char -> [Char] -> Bool
+      charMemberOfGroup x xs = elem x xs
 {- |
 =⚔️= Task 9
 
@@ -631,8 +638,11 @@ Try to introduce variables in this task (either with let-in or where) to avoid
 specifying complex expressions.
 -}
 
-sumLast2 n = error "sumLast2: Not implemented!"
-
+sumLast2 :: Int -> Int
+sumLast2 n =
+    let myTwoDigits = rem (abs n) 100
+    in if (myTwoDigits < 10) then myTwoDigits
+       else (quot myTwoDigits 10) + (rem myTwoDigits 10)
 
 {- |
 =💣= Task 10*
@@ -652,7 +662,10 @@ You need to use recursion in this task. Feel free to return to it later, if you
 aren't ready for this boss yet!
 -}
 
-firstDigit n = error "firstDigit: Not implemented!"
+firstDigit :: Int -> Int
+firstDigit n
+    | ((abs n) < 10) = n
+    | otherwise = firstDigit (div (abs n) 10)
 
 
 {-
