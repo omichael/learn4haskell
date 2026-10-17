@@ -680,3 +680,68 @@ Modules: http://learnyouahaskell.com/modules
 Let vs where: https://wiki.haskell.org/Let_vs._Where
 Packages and modules in Haskell: https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/packages.html
 -}
+{-
+
+Chapter1
+  Chapter1Normal
+    Task4: next
+      returns next Int for 42 [✔]
+      returns next Int for negative [✔]
+      returns next Int for 0 [✔]
+    Task5: lastDigit
+      last digit of 0 [✔]
+      last digit of 0 < x < 10 [✔]
+      last digit of 10 < x < 100 [✔]
+      last digit of 100 < x < 1000 [✔]
+      last digit of big num [✔]
+      last digit of negative [✔]
+    Task6: closestToZero
+      both positive, 1st wins [✔]
+      both positive, 2nd wins [✔]
+      both negative, 2nd wins [✔]
+      both negative, 1st wins [✔]
+      with 0, 1st wins [✔]
+      with 0, 2nd wins [✔]
+      equals [✔]
+      positive, negative, pos wins [✔]
+      positive, negative, neg wins [✔]
+    Task7: mid
+      positives up   [✔]
+      positives down [✔]
+      positives mix  [✔]
+      negatives down [✔]
+      negatives up   [✔]
+      negatives mix  [✔]
+      all equal [✔]
+      all equal, except 1 [✔]
+      all equal, except 1 [✔]
+      all equal, except 1 [✔]
+    Task8: isVowel
+      true for vowels [✔]
+      false for non-vowels [✔]
+      false for symbol [✔]
+    Task9: sumLast2
+      sumLast2 0 [✔]
+      sumLast2 0 < 10 [✔]
+      sumLast2 10 < 100 [✔]
+      sumLast2 100 < 1000 [✔]
+      sumLast2 0 > -10 [✔]
+      sumLast2 -10 > -100 [✔]
+      sumLast2 -100 > -1000 [✔]
+  Chapter1Advanced
+    Task 10*
+      first digit 0 [✔]
+      first digit 0 < 10 [✔]
+      first digit 10 < 100 [✔]
+      first digit 100 < 1000 [✔]
+      first digit big [✔]
+      first digit 0 > -10 [✔]
+      first digit -10 > -100 [✔]
+      first digit -100 > -1000 [✔]
+    Task 4 & 5 : first and last digit
+      last digit is the first digit of the reversed number [✔]
+        passed 100 tests.
+
+Finished in 0.0032 seconds
+47 examples, 0 failures
+-}
